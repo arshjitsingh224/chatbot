@@ -12,8 +12,10 @@ def load_langgraph_agenticai_app():
     if not user_input:
         st.errr("Error: Failed to load user input from the UI.")
         return
-
-    user_message = st.chat_input("Enter your message: ")
+    if st.session_state.isFetchButtonClicked:
+        user_message = st.session_state.timeframe
+    else:
+        user_message = st.chat_input("Enter your message: ")
 
     if user_message:
             obj_llm_config = GroqLLM(user_controls_input = user_input)
