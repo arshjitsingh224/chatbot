@@ -69,7 +69,7 @@ A conversational AI chatbot built to provide intelligent responses and engaging 
 ### Model Configuration
 ```python
 # In app.py - modify these constants
-GROQ_MODEL = "llama3-70b-8192"
+GROQ_MODEL = "llama-3.1-8b-instant, gemma2-9b-it"
 ```
 ```
 
